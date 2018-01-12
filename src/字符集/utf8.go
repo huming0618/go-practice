@@ -11,6 +11,7 @@ func hello() {
 	fmt.Println(s[0], s[2])
 	fmt.Println(s[:])
 	fmt.Println(s[:5])
+	fmt.Println("---------------")
 }
 
 func helloCN() {
@@ -23,9 +24,21 @@ func helloCN() {
 		fmt.Printf("%d\t%c\n", i, r)
 		i += size
 	}
+	fmt.Println("---------------")
 }
+
+func loop() {
+	s := "世界"
+	
+	for i, r := range s {
+		fmt.Printf("%d\t%q\t%d\n", i, r, r)
+	}
+	fmt.Println("---------------")
+}
+
 
 func main() {
 	hello()
 	helloCN()
+	loop()
 }
